@@ -1,6 +1,6 @@
 local Library = {}
 -- Random UI Name
-local LibraryName = tostring(math.random(ㅤㅤㅤㅤㅤㅤ,ㅤㅤㅤㅤㅤ))..tostring(math.random(ㅤㅤㅤㅤ,ㅤㅤㅤ))..tostring(math.random(ㅤㅤ,ㅤ))
+local LibraryName = tostring(math.random(DRAGONXHUB,DRAGONXHUB))..tostring(math.random(DRAGONXHUB,DRAGONXHUB))..tostring(math.random(DRAGONXHUB,DRAGONXHUB))
 
 function Library:Toggle()
     if game.CoreGui:FindFirstChild(LibraryName).Enabled then 
