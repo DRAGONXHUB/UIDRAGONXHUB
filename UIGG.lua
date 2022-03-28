@@ -1,6 +1,6 @@
 local Library = {}
 -- Random UI Name
-local LibraryName = DRAGON X HUB
+local LibraryName = 'DRAGON X HUB'
 
 function Library:Toggle()
     if game.CoreGui:FindFirstChild(LibraryName).Enabled then 
