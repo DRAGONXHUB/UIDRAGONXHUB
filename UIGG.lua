@@ -2,7 +2,6 @@ local Luxt1 = {}
 
 function Luxt1.CreateWindow(libName, logoId)
     local LuxtLib = Instance.new("ScreenGui")
-    local shadow = Instance.new("ImageLabel")
     local MainFrame = Instance.new("Frame")
     local sideHeading = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
@@ -86,13 +85,11 @@ function Luxt1.CreateWindow(libName, logoId)
         if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
             Draggable = true
             DragMousePosition = Vector2.new(input.Position.X, input.Position.Y)
-            FramePosition = Vector2.new(shadow.Position.X.Scale, shadow.Position.Y.Scale)
         end
     end)
     UserInputService.InputChanged:Connect(function(input)
         if Draggable == true then
             local NewPosition = FramePosition + ((Vector2.new(input.Position.X, input.Position.Y) - DragMousePosition) / Camera.ViewportSize)
-            shadow.Position = UDim2.new(NewPosition.X, 0, NewPosition.Y, 0)
         end
     end)
 
@@ -115,7 +112,6 @@ function Luxt1.CreateWindow(libName, logoId)
     LuxtLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     MainFrame.Name = "MainFrame"
-    MainFrame.Parent = shadow
     MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MainFrame.Position = UDim2.new(0.048, 0,0.075, 0)
     MainFrame.Size = UDim2.new(0, 553, 0, 452)
