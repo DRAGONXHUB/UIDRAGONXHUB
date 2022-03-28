@@ -1,6 +1,10 @@
 local Library = {}
 -- Random UI Name
-local LibraryName = 'DRAGON X HUB'
+local LibraryName = tostring(math.random(100000,200000))..tostring(math.random(100000,200000))..tostring(math.random(100000,200000))
+
+if game:FindFirstChild("CoreGui"):FindFirstChild("LibraryName") then
+    game:FindFirstChild("CoreGui"):FindFirstChild("LibraryName"):Destroy
+end
 
 function Library:Toggle()
     if game.CoreGui:FindFirstChild(LibraryName).Enabled then 
